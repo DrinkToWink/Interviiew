@@ -1,0 +1,32 @@
+#spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    url: jdbc:mysql://127.0.0.1:3306/interview?serverTimezone=GMT%2b8
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/interview?rewriteBatchedStatements=true&serverTimezone=GMT%2b8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 192.168.1.108
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 50
+        max-active: 100
+        max-wait: 2
+#  mvc:
+#    static-path-pattern: /**
+    # 默认值为 classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+
+
+#        url: jdbc:mysql://127.0.0.1:3306/interview?useSSL=false" +
+#          "&useUnicode=true&characterEncoding=utf8&autoReconnect=true" +
+#          "&rewriteBatchedStatements=true"
